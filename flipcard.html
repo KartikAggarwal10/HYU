@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .cont{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            perspective: 1000px;
+        }
+        .thecrd{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style:preserve-3d ;
+            transition:all 0.5s ease ;
+            background-color: beige;
+        }
+        .front{
+            position: absolute;
+            width: 80%;
+            height: 100%;
+            background-color: blue;
+            backface-visibility: hidden;
+
+        } .thecrd:hover{ transform: rotateY(180deg); } 
+        .back{
+            position: absolute;
+            width: 80%;
+            height: 100%;
+            background-color: red;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;}
+            .gr{
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+                background:linear-gradient(to bottom,red,pink);
+            }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="thecrd">
+        <div class="front">front of the card</div>
+        <div class="back">back of the card</div>
+    </div>
+    </div>
+    <div class="gr"></div>
+    <button onclick="myfun()">show Popup</button>
+    <script>
+        function myfun() {
+            alert("created by me!!");
+        }
+    </script>
+</body>
+</html>
